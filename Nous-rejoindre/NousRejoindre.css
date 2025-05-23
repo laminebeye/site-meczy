@@ -1,0 +1,188 @@
+ 
+ /* **** BASE COLOR **** */
+ :root{
+    --main-color: #068c28da;
+    --second-color: var(--white-color);
+    --third-color: #030303;
+    --white-color: var(--white-color);
+    --black-color: #068c28da;
+  }
+  
+   /* baniere */ 
+   .container-baniere-article
+   {
+     margin-top: 90px;
+     width: 100%;
+     background-image: url(../public/images/services/hommes-d-affaires-africains-se-serrant-la-main.jpg);
+     background-color: var(--white-color);
+     height: 440px;
+     background-size: cover;
+   }
+  
+   .text-baniere
+   {
+     position: absolute;
+     top: 27%;
+     left: 3%;
+   }
+  
+   .text-baniere h1
+   {
+     font-weight: bold;
+     font-size: 5vh;
+   }
+   .text-baniere p
+   {
+     font-size: 3vh;
+     font-style: italic;
+   }
+
+    /*rejoindre*/
+    .section-nous-rejoindre .titre-section h3 {
+        font-weight: bold;
+        text-transform: uppercase;
+        color: black;
+    }
+    
+    .section-nous-rejoindre img {
+        max-height: 400px;
+        object-fit: cover;
+    }
+
+    /***************maps*******************/
+    .maps-section {
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.maps-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.map-box {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.map-box iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.info-box {
+  background: white;
+  border-radius: 10px;
+  padding: 25px 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.info-box h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+.info-box p {
+  font-size: 14px;
+  margin: 8px 0;
+  color: #333;
+}
+
+.info-box a {
+  color: var(--main-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.info-box a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (min-width: 768px) {
+  .maps-container {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .map-box,
+  .info-box {
+    flex: 1;
+  }
+
+  .info-box {
+    text-align: left;
+  }
+}
+    /*************************** Responsive Banière + Rejoindre ***************************/
+
+@media (max-width: 767px) {
+  .container-baniere-article {
+    height: 300px;
+    background-position: center;
+  }
+
+  .text-baniere {
+    position: static;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .text-baniere h1 {
+    font-size: 3.5vh;
+  }
+
+  .text-baniere p {
+    font-size: 2.2vh;
+  }
+
+  .section-nous-rejoindre {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .section-nous-rejoindre img {
+    max-width: 100%;
+    height: auto;
+    max-height: 250px;
+  }
+
+  .section-nous-rejoindre .titre-section h3 {
+    font-size: 1.3em;
+    padding: 10px 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container-baniere-article {
+    height: 380px;
+    background-position: center;
+  }
+
+  .text-baniere h1 {
+    font-size: 4.2vh;
+  }
+
+  .text-baniere p {
+    font-size: 2.5vh;
+  }
+
+  .section-nous-rejoindre img {
+    max-height: 320px;
+  }
+
+  .section-nous-rejoindre .titre-section h3 {
+    font-size: 1.6em;
+  }
+}

@@ -1,0 +1,445 @@
+/* **** BASE CONTENT **** */
+*
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: verdana;
+    text-decoration: none !important;
+}
+
+/* **** PROGRESS **** */
+#progress {
+    background-color: #061429;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    display: none;
+    place-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+}
+#progressValue {
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: var(--main-color);
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+/* **** BASE COLOR **** */
+:root {
+  --main-color: #068c28da;
+  --white-color: #ffffff;
+  --second-color: var(--white-color);
+  --third-color: #030303;
+  --black-color: #068c28da;
+}
+
+
+/* **** first menu**** */
+
+.first-menu
+{
+    position: fixed;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    height: 5vh;
+    place-items: center;
+    display: flex;
+    z-index: 10000;
+    border-top: 3px dashed var(--white-color)
+}
+.first-menu .right-icon i:hover
+{
+  color: var(--main-color);
+}
+
+.left-icon 
+{
+    position: absolute;
+    left: 5vh;
+}
+
+.left-icon p,.right-icon i
+{
+    margin: 2vh;
+    font-size: 13px;
+     font-weight: bold;
+}
+
+.right-icon
+{
+    position: absolute;
+    right: 5vh;
+}
+
+/* **** second menu**** */
+
+.second-menu
+{
+    background-color: var(--black-color);
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content:end ;
+    position: fixed;
+    z-index: 1000;
+    top: 5vh;
+    box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 4px;
+}
+.second-menu .logo img
+{
+    max-width: 60px;
+    max-height: 50px;
+    position: absolute;
+    left: 5vh;
+    top: 1.5vh;
+}
+
+.menu-links ul
+{
+    display: flex;
+    position: absolute;
+    right:3vh;
+    top: 3.1vh;
+}
+
+.menu-links ul a
+{
+    margin-left: 5vh;
+    color: white;
+
+}
+.active, .menu-links li a:hover
+{
+    color: var(--third-color)!important; 
+}
+
+/* btn decourir */ 
+.cta {
+    display: flex;
+    padding: 11px 33px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    background:  #068c28da;
+    transition: 1s;
+    box-shadow: 6px 6px 0 black;
+    transform: skewX(-15deg);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .cta:focus {
+    outline: none;
+  }
+  
+  .cta:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 0 black;
+  }
+  
+  .cta .second {
+    transition: 0.5s;
+    margin-right: 0px;
+  }
+  
+  .cta:hover .second {
+    transition: 0.5s;
+    margin-right: 45px;
+  }
+  
+  .span {
+    transform: skewX(15deg);
+  }
+  
+  .second {
+    width: 20px;
+    margin-left: 30px;
+    position: relative;
+    top: 12%;
+  }
+  
+  .one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+  }
+  
+  .two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+  }
+  
+  .cta:hover .three {
+    animation: color_anim 1s infinite 0.2s;
+  }
+  
+  .cta:hover .one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+  }
+  
+  .cta:hover .two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+  }
+  
+  @keyframes color_anim {
+    0% {
+      fill: white;
+    }
+  
+    50% {
+      fill:black;
+    }
+  
+    100% {
+      fill: white;
+    }
+  }
+
+  /* baniere */ 
+  .container-baniere
+  {
+    margin-top: 90px;
+    width: 100%;
+    background-image: url(public/images/services/hommes-d-affaires-africains-se-serrant-la-main.jpg);
+    background-color: var(--white-color);
+    height: 500px;
+    background-size: cover;
+  }
+
+
+  .text-baniere
+  {
+    position: absolute;
+    top: 27%;
+    left: 3%;
+  }
+
+  .text-baniere h1
+  {
+    font-weight: bold;
+    font-size: 5vh;
+  }
+  .text-baniere p
+  {
+    font-size: 3vh;
+    font-style: italic;
+  }
+           /* FOOTER DE BASE */
+.container-footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 25px;
+  grid-row-gap: 5px;
+  background-color: var(--main-color);
+  min-height: 350px;
+  padding: 9vh 5vw;
+  margin-top: 3vh;
+  width: 100%;
+  color: white;
+}
+
+.footer1, .footer2, .footer3, .footer4 {
+  color: black;
+}
+
+.footer3 a, .footer2 a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer3 a:hover, .footer2 a:hover {
+  color: white;
+}
+
+.footer1 span {
+  color: black;
+}
+
+.footer4 button {
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 7px;
+  width: 50%;
+  padding: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.container-footer .content-sociaux i:hover {
+  color: whitesmoke;
+}
+
+/* RESPONSIVE FOOTER */
+@media screen and (max-width: 1024px) {
+  .container-footer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 30px;
+    padding: 6vh 5vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+    grid-row-gap: 25px;
+    padding: 5vh 5vw;
+  }
+
+  .footer4 button {
+    width: 80%;
+  }
+
+  .footer3 a, .footer2 a {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+          /*************membre**********/
+          
+        .section-nous-rejoindre .titre-section h3 {
+        font-weight: bold;
+        text-transform: uppercase;
+        color: black;
+    }
+    
+    .section-nous-rejoindre img {
+        max-height: 400px;
+        object-fit: cover;
+    }
+
+    #map-meczy {
+  width: 100%;
+  height: 500px;
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
+  margin-top: 30px;
+}
+.agences-section p {
+ text-align: center;
+}
+
+.container P{
+    text-align: center;
+}
+
+/***********RESPONSIVE**********/
+/* === Responsive Styles === */
+
+/* Petits écrans (mobiles) */
+@media (max-width: 768px) {
+  .first-menu,
+  .second-menu {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .left-icon,
+  .right-icon {
+    position: static;
+    margin: 1vh auto;
+  }
+
+  .menu-links ul {
+    flex-direction: column;
+    position: static;
+    align-items: center;
+    margin-top: 1vh;
+  }
+
+  .menu-links ul a {
+    margin: 10px 0;
+  }
+
+  .second-menu .logo img {
+    position: static;
+    margin: 1vh auto;
+  }
+
+  .container-baniere {
+    height: auto;
+    padding: 30px 15px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .text-baniere {
+    position: static;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .text-baniere h1 {
+    font-size: 4vh;
+  }
+
+  .text-baniere p {
+    font-size: 2.5vh;
+  }
+
+  .cta {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px auto;
+  }
+
+  .container-footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 5vh 2vh;
+    height: auto;
+    text-align: center;
+  }
+
+  .footer4 button {
+    width: 80%;
+  }
+
+  .section-nous-rejoindre img {
+    width: 100%;
+    height: auto;
+  }
+
+  #map-meczy {
+    height: 300px;
+  }
+}
+
+/* Écrans moyens (tablettes) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu-links ul {
+    right: 2vh;
+  }
+
+  .menu-links ul a {
+    margin-left: 3vh;
+  }
+
+  .text-baniere h1 {
+    font-size: 4.5vh;
+  }
+
+  .text-baniere p {
+    font-size: 2.8vh;
+  }
+
+  .container-footer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 20px;
+  }
+}

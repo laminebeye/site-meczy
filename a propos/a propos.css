@@ -1,0 +1,279 @@
+ 
+ /* **** BASE COLOR **** */
+ :root{
+    --main-color: #068c28da;
+    --second-color:-- #ffffff;
+;
+    --third-color: #030303;
+    --white-color: #ffffff;
+;
+    --black-color: #068c28da;
+  }
+  
+   /* baniere */ 
+   .container-baniere-article
+   {
+     margin-top: 90px;
+     width: 100%;
+     background-image: url(../public/images/bannieres/banner_apropos.png);
+     background-color: #ffffff;
+;
+     height: 500px;
+     background-size: cover;
+   }
+  
+   .text-baniere
+   {
+     position: absolute;
+     top: 27%;
+     left: 3%;
+   }
+  
+   .text-baniere h1
+   {
+     font-weight: bold;
+     font-size: 5vh;
+   }
+   .text-baniere p
+   {
+     font-size: 3vh;
+     font-style: italic;
+   }
+
+   /* linstitution */
+
+   .container-institution
+   {
+     height: 450px;
+     background-color: #f3f3f3;
+     margin-top: 10vh;
+     margin-bottom:7vh;
+   } 
+   .content-institution {
+     display: grid;
+     grid-template-columns: 1fr 2fr;
+     grid-template-rows: 1fr;
+     grid-column-gap: 10px;
+     grid-row-gap: 5px;
+     }
+     
+     .place-image { grid-area: 1 / 1 / 2 / 2;
+             
+      }
+     .place-text { grid-area: 1 / 2 / 2 / 3;
+           
+      }
+      .content-institution .place-image img
+      {
+       width: 100%;
+      }
+       .content-institution .place-text  
+       {
+         font-weight: 400;
+         margin-top: 4vh;
+         font-size: 18px;
+       }
+
+        /* equipes*/
+        .container-equipe
+        {
+         background-color: #f3f3f3;
+         margin-top: 5vh;
+        }
+        .content-equipe {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         grid-template-rows: 1fr;
+         grid-column-gap: 0px;
+         grid-row-gap: 0px;
+         text-align: center;
+         }
+         
+         .equipes1
+ 
+         {
+            grid-area: 1 / 1 / 2 / 2; 
+         }
+ 
+         .equipes2
+ 
+         { 
+           grid-area: 1 / 2 / 2 / 3; 
+         }
+         .equipe3
+ 
+          { 
+           grid-area: 1 / 3 / 2 / 4;
+          }
+          
+          .icon-social
+          {
+           height: 40px;
+           width: 40px;
+           padding: 5px;
+           display: flex;
+           font-size: 1.3em;
+           border-radius: 10px;
+           padding: 5px;
+          }
+
+       /* mission */
+          .produits-valeurs {
+            padding: vs 5vh;
+            background-color: white;
+            font-family: 'Segoe UI', sans-serif;
+          }
+          .produits-valeurs{
+            margin-bottom: 5vh;
+            margin-top: 5vh;
+          }
+          
+          .produits-valeurs .container {
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+          }
+          
+          .produits-valeurs h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: var(--main-color)
+          }
+          
+          .valeurs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+          }
+          
+          .valeurs-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+          }
+          
+          .valeurs-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+          }
+          
+          
+          
+          .valeurs-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+          }
+          
+          .valeurs-card h3 {
+            margin: 15px 0 10px;
+            color: var(--main-color);
+          }
+          
+          .valeurs-card p {
+            padding: 0 15px 20px;
+            color: #444;
+            font-size: 0.95em;
+          }
+
+
+          /* Tablettes (portrait) : entre 768px et 1024px */
+@media (max-width: 1024px) {
+  .content-institution {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .content-equipe {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .text-baniere {
+    top: 20%;
+    left: 5%;
+  }
+
+  .text-baniere h1 {
+    font-size: 4vh;
+  }
+
+  .text-baniere p {
+    font-size: 2.5vh;
+  }
+}
+
+/* Mobiles : moins de 768px */
+@media (max-width: 768px) {
+  .container-baniere-article {
+    height: 300px;
+    background-position: center;
+  }
+
+  .text-baniere {
+    top: 15%;
+    left: 5%;
+  }
+
+  .text-baniere h1 {
+    font-size: 3.5vh;
+  }
+
+  .text-baniere p {
+    font-size: 2vh;
+  }
+
+  .content-institution {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .content-equipe {
+    grid-template-columns: 1fr;
+  }
+
+  .valeurs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .valeurs-card {
+    margin-bottom: 20px;
+  }
+
+  .produits-valeurs {
+    padding: 40px 10px;
+  }
+}
+
+
+/* Responsive Équipe - Tablette */
+@media (max-width: 1024px) {
+  .content-equipe {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+
+  .equipes1, .equipes2, .equipe3 {
+    grid-area: auto;
+  }
+}
+
+/* Responsive Équipe - Mobile */
+@media (max-width: 768px) {
+  .content-equipe {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+
+  .equipes1, .equipes2, .equipe3 {
+    grid-area: auto;
+  }
+
+  .icon-social {
+    margin: auto;
+  }
+}
+

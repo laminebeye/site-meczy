@@ -1,0 +1,541 @@
+ 
+ /* **** BASE COLOR **** */
+ :root{
+    --main-color: #068c28da;
+    --second-color: var(--white-color);
+    --third-color: #030303;
+    --white-color: var(--white-color);
+    --black-color: #068c28da;
+  }
+
+  /* **** first menu**** */
+
+.first-menu
+{
+    position: fixed;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    height: 5vh;
+    place-items: center;
+    display: flex;
+    z-index: 10000;
+    border-top: 3px dashed var(--white-color)
+}
+.first-menu .right-icon i:hover
+{
+  color: var(--main-color);
+}
+
+.left-icon 
+{
+    position: absolute;
+    left: 5vh;
+}
+
+.left-icon p,.right-icon i
+{
+    margin: 2vh;
+    font-size: 13px;
+     font-weight: bold;
+}
+
+.right-icon
+{
+    position: absolute;
+    right: 5vh;
+}
+
+/* **** second menu**** */
+
+.second-menu
+{
+    background-color: var(--black-color);
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content:end ;
+    position: fixed;
+    z-index: 1000;
+    top: 5vh;
+    box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 4px;
+}
+.second-menu .logo img
+{
+    max-width: 60px;
+    max-height: 50px;
+    position: absolute;
+    left: 5vh;
+    top: 1.5vh;
+}
+
+.menu-links ul
+{
+    display: flex;
+    position: absolute;
+    right:3vh;
+    top: 3.1vh;
+}
+
+.menu-links ul a
+{
+    margin-left: 5vh;
+    color: white;
+
+}
+.active, .menu-links li a:hover
+{
+    color: var(--third-color)!important; 
+}
+  
+   /* baniere */ 
+   .container-baniere-article
+   {
+     margin-top: 90px;
+     width: 100%;
+     background-image: url(../public/images/bannieres/banner_\ services.png);
+     background-color: var(--white-color);
+     height: 500px;
+     background-size: cover;
+   }
+  
+   .text-baniere
+   {
+     position: absolute;
+     top: 27%;
+     left: 3%;
+   }
+  
+   .text-baniere h1
+   {
+     font-weight: bold;
+     font-size: 5vh;
+   }
+   .text-baniere p
+   {
+     font-size: 3vh;
+     font-style: italic;
+   }
+
+
+   .titre-section h3
+   {
+     text-align: center;
+     font-weight: 600;
+     padding: 1vh;
+     padding-top: 5VH;
+   }
+
+   .titre-section span
+   {
+     width: 85PX;
+     height: 3px;
+     display: block;
+     background-color: var(--black-color);
+     margin: 0 auto;
+     margin-bottom: 20px;
+   }
+  
+
+
+   /***********************************************card************************************************/
+  
+  /* styles.css */
+.produits-epargne {
+  padding: 60px 20px;
+  background-color: #f3f3f3;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.produits-epargne .container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.produits-epargne h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #003366;
+}
+
+.epargne-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.epargne-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.epargne-card:hover {
+  transform: translateY(-5px);
+}
+
+.epargne-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.epargne-card h3 {
+  margin: 15px 0 10px;
+  color: var(--main-color);
+}
+
+.epargne-card p {
+  padding: 0 15px 20px;
+  color: #444;
+  font-size: 0.95em;
+}
+
+
+/*SECTIONS CREDIT*/
+/* Ajoute ceci à styles.css */
+.produits-credit {
+  padding: 60px 20px;
+  background-color: #f3f3f3;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.produits-credit .container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.produits-credit h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color:var(--main-color)
+}
+
+.credit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.credit-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.credit-card:hover {
+  transform: translateY(-5px);
+}
+
+.credit-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.credit-card h3 {
+  margin: 15px 0 10px;
+  color: var(--main-color)
+}
+
+.credit-card p {
+  padding: 0 15px 20px;
+  color: #444;
+  font-size: 0.95em;
+}
+
+/* SECTION VIREMENTS */
+
+.section-virements {
+  padding: 60px 20px;
+  background-color: #f3f3f3;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.section-virements .container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.section-virements h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: var(--main-color)
+}
+
+.virements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.virement-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.virement-card:hover {
+  transform: translateY(-5px);
+}
+
+.virement-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.virement-card h3 {
+  margin: 15px 0 10px;
+  color: var(--main-color);
+}
+
+.virement-card p {
+  padding: 0 15px 20px;
+  color: #444;
+  font-size: 0.95em;
+}
+
+/* SECTION dautres credits*/
+.offre {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.offre img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+}
+
+.texte {
+  padding: 20px;
+}
+
+.texte h3 {
+  margin-top: 0;
+  color: var(--main-color);
+}
+
+.texte p {
+  color: #333;
+  line-height: 1.6;
+}
+
+
+/* SECTION epargne*/
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+th {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+tr:hover {
+  background-color: var(--main-color);
+}
+
+.details {
+  display: none;
+  background-color: #fff;
+  padding: 15px;
+  border-top: 1px solid #ccc;
+  color: #333;
+}
+
+.details td {
+  cursor: default;
+}
+
+/***************details credit*************/
+
+
+/******************************** Responsive Styles************************ */
+
+/* ---------------- Responsive : Mobile First ---------------- */
+@media (max-width: 768px) {
+
+  /* Bannière : texte centré */
+  .text-baniere {
+    position: relative;
+    text-align: center;
+    top: 10%;
+    left: 0;
+    padding: 20px;
+  }
+
+  .text-baniere h1 {
+    font-size: 4vh;
+  }
+
+  .text-baniere p {
+    font-size: 2.5vh;
+  }
+
+  /* Menus */
+  .first-menu {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .first-menu .left-icon,
+  .first-menu .right-icon {
+    position: static;
+    margin: 5px 0;
+  }
+
+  .second-menu {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .second-menu .logo img {
+    position: static;
+    margin-bottom: 10px;
+  }
+
+  .menu-links ul {
+    flex-direction: column;
+    position: static;
+    margin-top: 10px;
+  }
+
+  .menu-links ul a {
+    margin: 10px 0;
+  }
+
+  /* Sections cartes */
+  .produits-epargne,
+  .produits-credit,
+  .section-virements {
+    padding: 40px 10px;
+  }
+
+  .epargne-grid,
+  .credit-grid,
+  .virements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .epargne-card p,
+  .credit-card p,
+  .virement-card p {
+    font-size: 0.9em;
+  }
+
+  /* Section .offre */
+  .offre {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .offre img {
+    width: 100%;
+    height: auto;
+  }
+
+  .texte {
+    padding: 15px;
+    text-align: center;
+  }
+
+  /* Tableau scroll horizontal */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    white-space: normal;
+    font-size: 0.9em;
+  }
+
+  /* Footer */
+  .container-footer {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .container-footer > div {
+    margin-bottom: 20px;
+  }
+
+  .footer4 form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer4 input,
+  .footer4 button {
+    width: 100%;
+  }
+}
+
+/* ---------------- Très petits écrans (max-width: 480px) ---------------- */
+@media (max-width: 480px) {
+
+  .text-baniere h1 {
+    font-size: 3.2vh;
+  }
+
+  .text-baniere p {
+    font-size: 2.2vh;
+  }
+
+  .titre-section h3 {
+    font-size: 1.4rem;
+  }
+
+  .epargne-card h3,
+  .credit-card h3,
+  .virement-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .texte h3 {
+    font-size: 1.1rem;
+  }
+
+  .texte p {
+    font-size: 0.95rem;
+  }
+}
+

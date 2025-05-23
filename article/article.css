@@ -1,0 +1,124 @@
+ 
+ /* **** BASE COLOR **** */
+:root{
+  --main-color: #068c28da;
+  --white-color: #ffffff;
+  --third-color: #030303;
+  --white-color: #ffffff;
+  ;
+  --black-color: #068c28da;
+}
+
+ /* baniere */ 
+ .container-baniere-article
+ {
+   margin-top: 90px;
+   width: 100%;
+   background-image: url(../public/images/services/hommes-d-affaires-africains-se-serrant-la-main.jpg);
+   background-color: #ffffff;
+   ;
+   height: 500px;
+   background-size: cover;
+ }
+
+ .text-baniere
+ {
+   position: absolute;
+   top: 27%;
+   left: 3%;
+ }
+
+ .text-baniere h1
+ {
+   font-weight: bold;
+   font-size: 5vh;
+ }
+ .text-baniere p
+ {
+   font-size: 3vh;
+   font-style: italic;
+ }
+
+/* Section Nos Agences */
+.titre-section {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.titre-section h3 {
+  font-size: 32px;
+  color: var(--black-color);
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.agences-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.agence {
+  background-image: url(../public/images/bannieres/arbre\ datgent.jpg);
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.agence:hover {
+  transform: translateY(-5px);
+}
+
+/* Carte Google Maps */
+#map-meczy {
+  width: 100%;
+  height: 500px;
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
+  margin-top: 30px;
+}
+.agences-section p {
+ text-align: center;
+}
+
+/* TABLETTES */
+@media (max-width: 768px) {
+  .agences-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .agence {
+    width: 90%;
+  }
+
+  .titre-section h3 {
+    font-size: 26px;
+  }
+
+  #map-meczy {
+    height: 350px;
+  }
+}
+
+/* MOBILES */
+@media (max-width: 480px) {
+  .titre-section h3 {
+    font-size: 22px;
+  }
+
+  .agence {
+    width: 95%;
+    padding: 15px;
+  }
+
+  #map-meczy {
+    height: 300px;
+  }
+}
