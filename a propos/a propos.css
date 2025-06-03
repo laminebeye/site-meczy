@@ -277,3 +277,37 @@
   }
 }
 
+
+.vision-mission-valeurs {
+  background-color: #f8f9fa;
+}
+
+.vision-mission-valeurs .box {
+  background: #ffffff;
+  border-radius: 8px;
+  border-bottom: 3px solid var(--main-color); /* Couleur de soulignement */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  margin-bottom: 4vh;
+  margin-top: 4vh;
+}
+
+.vision-mission-valeurs .box:hover {
+  transform: translateY(-5px);
+}
+
+.vision-mission-valeurs h4 {
+  color: var(--main-color);
+  margin-bottom: 15px;
+}
+
+.vision-mission-valeurs p, 
+.vision-mission-valeurs li {
+  color: #333;
+  font-size: 16px;
+}
+
+.vision-mission-valeurs ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
