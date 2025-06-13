@@ -916,7 +916,7 @@
 }
 
 .section-accueil .intro {
-  font-size: 1.1em;
+  font-size: 0.95em;
   color: black;
   margin-bottom: 40px;
 }
@@ -926,15 +926,6 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
-
-.accueil-colonne {
-  /*background: #f9f9f9;
-
-  padding: 20px;
-  transition: transform 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);*/
-}
-
 
 .accueil-colonne img {
   width: 100%;
