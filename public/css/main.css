@@ -212,7 +212,7 @@
   {
     margin-top: 90px;
     width: 100%;
-    background-image: url(../images/bannieres/arbre\ datgent.jpg);
+    background-image: url(../images/bannieres/slide-img1v2.png);
     background-color: var(--white-color);
     height: 500px;
     background-size: cover;
@@ -849,7 +849,7 @@
                 /* styles.css */
 .bank-services {
   padding: 60px 20px;
-  background-image: url(../images/bannieres/arbre\ datgent.jpg);
+  background-image: url('../images/bannieres/mission.jpg');
   font-family: Arial, sans-serif;
 }
 
@@ -869,7 +869,7 @@
 }
 
 .service-card {
-  background-color: white;
+  background-color: var(--white-color);
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -887,8 +887,9 @@
 }
 
 .service-card p {
-  color: #333;
-  font-size: 0.95em;
+  color: black;
+  font-size: 1.1em;
+  
 }
 
 
@@ -927,11 +928,11 @@
 }
 
 .accueil-colonne {
-  background: #f9f9f9;
+  /*background: #f9f9f9;
 
   padding: 20px;
   transition: transform 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);*/
 }
 
 
