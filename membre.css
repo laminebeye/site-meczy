@@ -43,7 +43,6 @@
   --black-color: #068c28da;
 }
 
-
 /* FIRST MENU */
 .first-menu {
     position: fixed;
@@ -90,6 +89,13 @@
     padding: 0 4vh;
     box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 4px;
 }
+
+/* Spécifique à la page membre */
+.second-menu .menu-links ul li a {
+    font-size: 14px;
+    font-weight: 500;
+}
+
 
 .second-menu .logo {
     flex-shrink: 0;
@@ -233,7 +239,6 @@
         to { opacity: 1; transform: translateY(0); }
     }
 }
-
 /* btn decourir */ 
 .cta {
     display: flex;
