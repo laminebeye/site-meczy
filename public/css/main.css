@@ -44,85 +44,196 @@
 }
 
 
-/* **** first menu**** */
-
-.first-menu
-{
+/* FIRST MENU */
+.first-menu {
     position: fixed;
     top: 0;
     background-color: white;
     width: 100%;
     height: 5vh;
-    place-items: center;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vh;
     z-index: 10000;
-    border-top: 3px dashed var(--white-color)
-}
-.first-menu .right-icon i:hover
-{
-  color: var(--main-color);
+    border-top: 3px dashed var(--white-color);
 }
 
-.left-icon 
-{
-    position: absolute;
-    left: 5vh;
-}
-
-.left-icon p,.right-icon i
-{
-    margin: 2vh;
+.left-icon p, .right-icon i {
+    margin: 0 1vh;
     font-size: 13px;
-     font-weight: bold;
+    font-weight: bold;
 }
 
-.right-icon
-{
-    position: absolute;
-    right: 5vh;
-}
-
-/* **** second menu**** */
-
-.second-menu
-{
-    background-color: var(--black-color);
-    height: 10vh;
-    width: 100%;
+.left-icon {
     display: flex;
-    justify-content:end ;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.right-icon {
+    display: flex;
+    gap: 1vh;
+}
+
+/* SECOND MENU */
+.second-menu {
+    background-color: var(--black-color);
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: fixed;
     z-index: 1000;
-    top: 5vh;
+    top: 5vh; /* sous le first-menu */
+    padding: 0 4vh;
     box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 4px;
 }
-.second-menu .logo img
-{
+
+.second-menu .logo {
+    flex-shrink: 0;
+}
+.second-menu .logo img {
     max-width: 60px;
     max-height: 50px;
-    position: absolute;
-    left: 5vh;
-    top: 1.5vh;
 }
 
-.menu-links ul
-{
+
+
+@media screen and (max-width: 768px) {
+    .second-menu {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 1vh 2vh;
+    }
+
+    .second-menu .logo {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1vh;
+    }
+
+    .second-menu .logo img {
+        max-width: 60px;
+        max-height: 50px;
+        margin-top: 11vh;
+    }
+
+    .burger {
+        position: absolute;
+        right: 2vh;
+        top: 6vh; /* ajuster pour l’espacement sous le logo */
+        margin-top: 6vh;
+    }
+
+    .menu-links {
+        top: 12vh; /* décalé après le logo */
+    }
+}
+
+.burger {
+  display: block;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  right: 2vh;
+  top: 6vh; /* ajusté pour être sous le premier menu */
+  z-index: 1100; /* plus élevé que le menu (.menu-links) */
+}
+.menu-links {
+    margin-left: auto; /* pousse les liens à droite */
+}
+
+.menu-links ul {
     display: flex;
-    position: absolute;
-    right:3vh;
-    top: 3.1vh;
+    gap: 4vh;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.menu-links ul a
-{
-    margin-left: 5vh;
+.menu-links ul li a {
     color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
 
+.burger {
+    display: none; /* par défaut = desktop */
 }
-.active, .menu-links li a:hover
-{
-    color: var(--third-color)!important; 
+
+@media screen and (max-width: 768px) {
+    .burger {
+        display: block; /* version mobile */
+    }
 }
+
+
+
+
+/* LINKS */
+.menu-links ul {
+    display: flex;
+    gap: 3vh;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.active,
+.menu-links li a:hover {
+    color: var(--third-color) !important;
+}
+
+/* BURGER BUTTON */
+.burger {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+
+    .menu-links {
+        display: none;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        background-color: var(--black-color);
+    }
+
+    .menu-links ul {
+        flex-direction: column;
+        padding: 2vh;
+        gap: 2vh;
+        align-items: flex-start;
+    }
+
+    .menu-links.show {
+        display: block;
+        animation: slideDown 0.3s ease-in-out;
+    }
+
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+}
+
 
 /* btn decourir */ 
 .cta {

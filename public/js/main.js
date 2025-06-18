@@ -198,3 +198,16 @@ function closePopup() {
     card.style.animationPlayState = 'paused';
     observer.observe(card);
   });
+
+
+    const burger = document.getElementById("burger");
+    const menu = document.getElementById("menuLinks");
+    const icon = document.getElementById("burger-icon");
+
+    burger.addEventListener("click", () => {
+        menu.classList.toggle("show");
+        icon.classList.toggle("bi-list");
+        icon.classList.toggle("bi-x");
+    });
+
+    console.log("Script burger chargé !");

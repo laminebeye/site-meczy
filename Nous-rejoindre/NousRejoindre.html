@@ -25,68 +25,51 @@
     <div id="progress">
         <span id="progressValue">&#x1F815</span>
     </div>
-    <!--section menu--->
-    <div class="container-menu navContainer" id="accueill">
-        <!--first-menu-->
-        <div class="first-menu">
-            <div class="left-icon">
-                
-                <p class="d-inline">
-                    <i class="bi bi-telephone"></i>
-                    33 820 44 63 
-                </p>
-                <p class="d-inline">
-                    <i class="bi bi-envelope-at"></i>
-                    meczy@meczy.sn
-                </p>
-                <p class="d-inline">
-                    <i class="bi bi-geo-alt"></i>
-                    Dakar,Senegal
-                </p>
-            </div>
+    <!-- section menu -->
+<div class="container-menu navContainer" id="accueill">
 
-            <div class="right-icon">
-                <i class="bi bi-facebook"></i>
-                <i class="bi bi-youtube"></i>
-                <i class="bi bi-linkedin"></i>
-                <i class="bi bi-twitter"></i>
-                <i class="bi bi-instagram"></i>
-                <i class="bi bi-skype"></i>
-            </div>
-        </div>
-
-        <!--secon-menu-->
-        <div class="second-menu">
-           
-            <div class="logo">
-                <a href="../index.html"><img src="../public/images/logo/logo-meczy.jpg" alt="logo"></a>
-            </div>
-            <!--menu-->
-            <div class="menu-links">
-                <ul>
-                    <li>
-                        <a href="../#accueill" >Accueil</a>
-                    </li>
-                    <li>
-                        <a href="../a propos/a propos.html">A propos</a>
-                    </li>
-                    <li>
-                        <a href="../nos services/nos services.html">Nos Services</a>
-                    </li>
-                    <li>
-                        <a href="../Article/article.html">Nos agences</a>
-                    </li>
-                    <li>
-                        <a href="#Nous-rejoindre/NousRejoindre.html" class="active">Nous rejoindre</a>
-                    </li>
-                    <li>
-                        <a href="../contact/contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
+  <!-- first-menu -->
+  <div class="first-menu">
+    <div class="left-icon">
+      <p class="d-inline"><i class="bi bi-telephone"></i> 33 820 44 63</p>
+      <p class="d-inline"><i class="bi bi-envelope-at"></i> meczy@meczy.sn</p>
+      <p class="d-inline"><i class="bi bi-geo-alt"></i> Dakar, Senegal</p>
     </div>
+    <div class="right-icon">
+      <i class="bi bi-facebook"></i>
+      <i class="bi bi-youtube"></i>
+      <i class="bi bi-linkedin"></i>
+      <i class="bi bi-twitter"></i>
+      <i class="bi bi-instagram"></i>
+      <i class="bi bi-skype"></i>
+    </div>
+  </div>
+
+  <!-- second-menu -->
+  <div class="second-menu">
+    <div class="logo">
+      <a href="../index.html"><img src="../public/images/logo/logo-meczy.jpg" alt="logo"></a>
+    </div>
+
+    <!-- bouton burger -->
+    <div class="burger" id="burger">
+      <i class="bi bi-list" id="burger-icon"></i>
+    </div>
+
+    <!-- liens navigation -->
+    <div class="menu-links" id="menuLinks">
+      <ul>
+        <li><a href="../index.html#accueil">Accueil</a></li>
+        <li><a href="../a propos/a propos.html">A propos</a></li>
+        <li><a href="../nos services/nos services.html">Nos Services</a></li>
+        <li><a href="../Article/Article.html">Nos agences</a></li>
+        <li><a href="NousRejoindre.html" class="active">Nous rejoindre</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
     <!--section baniere-->
     <div class="container-baniere-article">
         <div class="text-baniere">
@@ -256,5 +239,19 @@
     <script src="../public/js/progress.js"></script>
     <script src="../public/js/nothidemodal.js"></script>
     <script src="../public/js/setDetailsmodal.js"></script>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const burger = document.getElementById("burger");
+    const menu = document.getElementById("menuLinks");
+    const icon = document.getElementById("burger-icon");
+
+    burger.addEventListener("click", () => {
+      menu.classList.toggle("show");
+      icon.classList.toggle("bi-list");
+      icon.classList.toggle("bi-x");
+    });
+  });
+</script>
+
 </body>
 </html>
