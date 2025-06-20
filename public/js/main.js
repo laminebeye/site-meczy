@@ -145,8 +145,8 @@ const actualites = [
     contenu: "L'assemblée générale mixte de la MECZY aura lieu le samedi 24 mai 2025 à 10h dans les locaux de la maison communautaire. Tous les membres sont invités."
   },
   {
-    titre: "Nouveaux taux préférentiels",
-    contenu: "Nos taux sur les crédits immobiliers et les comptes d'épargne sont maintenant plus avantageux pour nos clients fidèles."
+    titre: "Mise en service des TPE",
+    contenu: "Bonne nouvelle!!! Les TPE sont à nouveau fonctionnels au niveau de tous les guichets de la MECZY."
   },
   {
     titre: "Nouvelle branche de finance islamique",

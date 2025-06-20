@@ -15,7 +15,7 @@
    {
      margin-top: 90px;
      width: 100%;
-     background-image: url(../public/images/bannieres/slide-img2v2.png);
+     background-image: url(../public/images/equipes/yoff-1.jpeg);
      background-color: #ffffff;
 ;
      height: 500px;
@@ -33,6 +33,7 @@
    {
      font-weight: bold;
      font-size: 5vh;
+     color: black;
    }
    .text-baniere p
    {
