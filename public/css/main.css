@@ -408,7 +408,7 @@
 }
 
 .simulateur-container button:hover {
-  background-color: #004d40;
+  background-color: var(--main-color);
 }
 
 .resultat {

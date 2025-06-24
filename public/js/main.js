@@ -229,7 +229,8 @@ function simulerCredit() {
     case 'scolaire': tauxAnnuel = 4; break;
     case 'logement': tauxAnnuel = 5.5; break;
     case 'conso': tauxAnnuel = 7; break;
-    case 'auto': tauxAnnuel = 6.5; break;
+    case 'Habitat': tauxAnnuel = 6.5; break;
+    case 'Commerçant': tauxAnnuel = 6.5; break;
     default: tauxAnnuel = 6;
   }
 
