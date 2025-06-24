@@ -318,40 +318,153 @@
     }
   }
 
-  /* baniere */ 
-  .container-baniere
-  {
-    margin-top: 90px;
+  /* ====== BANNIÈRE ====== */
+.container-baniere {
+  margin-top: 90px;
+  width: 100%;
+  background-image: url(../images/equipes/AG17.JPG);
+  background-color: var(--white-color);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 20px;
+  position: relative;
+  min-height: 500px;
+}
+
+.container-baniere a {
+  color: #ffffff;
+}
+
+.text-baniere {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+  padding-right: 20px;
+  z-index: 2;
+}
+
+.text-baniere h1 {
+  font-weight: bold;
+  font-size: 5vh;
+  color: white;
+}
+
+.text-baniere p {
+  font-size: 3vh;
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+/* ====== SIMULATEUR DE PRÊT ====== */
+.simulateur-container {
+  width: 320px;
+  background: white;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  margin-left: auto;
+  animation: fadeInUp 1s ease-out both;
+}
+
+.simulateur-container h2 {
+  text-align: center;
+  color: var(--main-color);
+  font-size: 18px;
+}
+
+.simulateur-container label {
+  font-size: 14px;
+  margin-top: 10px;
+  display: block;
+}
+
+.simulateur-container input,
+.simulateur-container select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.simulateur-container button {
+  margin-top: 15px;
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.simulateur-container button:hover {
+  background-color: #004d40;
+}
+
+.resultat {
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ✨ ANIMATION */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+  .container-baniere {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 15px;
+  }
+
+  .text-baniere {
+    position: static;
+    text-align: center;
+    padding: 0;
+  }
+
+  .text-baniere h1 {
+    font-size: 4vh;
+  }
+
+  .text-baniere p {
+    font-size: 2.5vh;
+  }
+
+  .simulateur-container {
+    margin-top: 20px;
     width: 100%;
-    background-image: url(../images/equipes/AG17.JPG);
-    background-color: var(--white-color);
-    height: 500px;
-    background-size: cover;
+    max-width: 400px;
+    margin-left: 0;
   }
+}
 
-  .container-baniere a{
-    color: #ffffff;
-  }
 
-  .text-baniere
-  {
-    position: absolute;
-    top: 27%;
-    left: 3%;
-  }
 
-  .text-baniere h1
-  {
-    font-weight: bold;
-    font-size: 5vh;
-    color: white;
-  }
-  .text-baniere p
-  {
-    font-size: 3vh;
-    font-weight: bold;
-    color: var(--main-color);
-  }
+
+
 
 /* ====== Section Mot du Directeur ====== */
 .mot-directeur {

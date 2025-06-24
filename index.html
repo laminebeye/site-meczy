@@ -67,14 +67,16 @@
 </div>
 
     <!--section baniere-->
-    <div class="container-baniere">
-        <div class="text-baniere">
-            <h1 id="animated-text"></h1>
-            <p>Deureum Bi Guenoul Gaal Gui >></p>
-<button class="cta">
-    <span  class="span"> <a href="membre.html ">Devenir membre</a></span>
-    <span class="second">
-      <svg
+<div class="container-baniere">
+  <!-- Texte à gauche -->
+  <div class="text-baniere">
+    <h1 id="animated-text"></h1>
+    <p>Deureum Bi Guenoul Gaal Gui >></p>
+    <button class="cta">
+      <span class="span"> <a href="membre.html ">Devenir membre</a></span>
+      <span class="second">
+        <!-- SVG ARROW -->
+         <svg
         width="50px"
         height="20px"
         viewBox="0 0 66 43"
@@ -106,10 +108,36 @@
           ></path>
         </g>
       </svg>
-    </span>
-  </button>
-        </div>
-    </div>
+        <!-- Ton SVG inchangé ici -->
+      </span>
+    </button>
+  </div>
+
+  <!-- Simulateur intégré à droite -->
+  <div class="simulateur-container">
+    <h2>Simulateur de Prêt - MECZY</h2>
+    <form id="simulateur-form">
+      <label for="typeCredit">Type de crédit</label>
+      <select id="typeCredit" required>
+        <option value="">-- Choisir --</option>
+        <option value="scolaire">Crédit scolaire</option>
+        <option value="logement">Crédit logement</option>
+        <option value="conso">Crédit consommation</option>
+        <option value="auto">Crédit automobile</option>
+      </select>
+
+      <label for="montant">Montant du prêt (FCFA)</label>
+      <input type="number" id="montant" required>
+
+      <label for="duree">Durée (en mois)</label>
+      <input type="number" id="duree" required>
+
+      <button type="button" onclick="simulerCredit()">Simuler</button>
+    </form>
+
+    <div id="resultat" class="resultat"></div>
+  </div>
+</div>
 
     
     <section class="statistiques-banque">

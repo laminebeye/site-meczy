@@ -211,3 +211,32 @@ function closePopup() {
     });
 
     console.log("Script burger chargé !");
+
+
+// simulateur de pret 
+function simulerCredit() {
+  const type = document.getElementById('typeCredit').value;
+  const montant = parseFloat(document.getElementById('montant').value);
+  const duree = parseInt(document.getElementById('duree').value);
+
+  if (!type || !montant || !duree || montant <= 0 || duree <= 0) {
+    document.getElementById('resultat').innerHTML = "Veuillez remplir tous les champs.";
+    return;
+  }
+
+  let tauxAnnuel;
+  switch(type) {
+    case 'scolaire': tauxAnnuel = 4; break;
+    case 'logement': tauxAnnuel = 5.5; break;
+    case 'conso': tauxAnnuel = 7; break;
+    case 'auto': tauxAnnuel = 6.5; break;
+    default: tauxAnnuel = 6;
+  }
+
+  const tauxMensuel = tauxAnnuel / 100 / 12;
+  const mensualite = montant * tauxMensuel / (1 - Math.pow(1 + tauxMensuel, -duree));
+  const mensualiteArrondie = mensualite.toFixed(0);
+
+  document.getElementById('resultat').innerHTML =
+    `💡 Mensualité estimée : <strong>${mensualiteArrondie} FCFA</strong> sur ${duree} mois.`;
+}
